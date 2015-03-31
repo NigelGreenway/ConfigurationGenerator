@@ -1,0 +1,19 @@
+{
+    "name": "colonel/configuration-generator",
+    "description": "An annotation parser to create the configuration store for colonel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nigel Greenway",
+            "email": "nigel_greenway@me.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Colonel\\ConfigurationGenerator\\": "src"
+        }
+    },
+    "require": {
+      "php": ">=5.5.0"
+    }
+}
