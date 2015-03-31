@@ -13,6 +13,11 @@
             "Colonel\\ConfigurationGenerator\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Colonel\\ConfigurationGenerator\\Demo\\": "Demo"
+        }
+    },
     "require": {
       "php": ">=5.5.0"
     }
