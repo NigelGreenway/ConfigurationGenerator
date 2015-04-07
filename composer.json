@@ -15,12 +15,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Colonel\\ConfigurationGenerator\\Demo\\": "Demo"
+            "Colonel\\ConfigurationGenerator\\Demo\\": "Demo",
+            "Colonel\\ConfigurationGenerator\\Test\\": "tests"
         }
     },
     "require": {
       "php": ">=5.5.0",
       "symfony/console": "^2.6.5",
-        "phpunit/phpunit": "^4.6"
+      "phpunit/phpunit": "^4.6"
     }
 }
