@@ -7,3 +7,4 @@ All Notable changes to `colonel/configuration-generator` will be documented in t
 - CONTRIBUTING.md
 - LICENSE.md
 - CHANGELOG.md
+- Add Writer interface
