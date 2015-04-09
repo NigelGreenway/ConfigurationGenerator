@@ -22,6 +22,7 @@
     "require": {
       "php": ">=5.5.0",
       "symfony/console": "^2.6.5",
-      "phpunit/phpunit": "^4.6"
+      "phpunit/phpunit": "^4.6",
+        "twig/twig": "^1.18.0"
     }
 }
