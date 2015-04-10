@@ -20,9 +20,15 @@ interface ConfigurationWriterInterface
      * Write the configuration array to a
      * file
      *
-     * @param array $configuration
+     * @param string  $configurationPath
+     * @param array   $configuration
+     * @param integer $spaces
      *
      * @return void
      */
-    public function write(array $configuration = []);
+    public static function write(
+        $configurationPath,
+        array $configuration = [],
+        $spaces
+    );
 }
