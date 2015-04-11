@@ -32,7 +32,7 @@ final class PHPConfigurationWriter implements ConfigurationWriterInterface
     private function __construct()
     {
         $this->twig = new Twig_Environment(
-            new Twig_Loader_Filesystem(__DIR__)
+            new Twig_Loader_Filesystem(__DIR__ . '/Template')
         );
 
         $varExportFunction = new Twig_SimpleFunction('var_export', 'var_export');
