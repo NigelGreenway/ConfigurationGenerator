@@ -8,3 +8,5 @@ All Notable changes to `colonel/configuration-generator` will be documented in t
 - LICENSE.md
 - CHANGELOG.md
 - Add Writer interface
+- Add PHP writer
+- Add JSON Writer
