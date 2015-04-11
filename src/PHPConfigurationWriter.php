@@ -9,7 +9,6 @@
 namespace Colonel\ConfigurationGenerator;
 
 use Twig_Environment;
-use Twig_Extension_Debug;
 use Twig_Loader_Filesystem;
 use Twig_SimpleFunction;
 
@@ -33,15 +32,11 @@ final class PHPConfigurationWriter implements ConfigurationWriterInterface
     private function __construct()
     {
         $this->twig = new Twig_Environment(
-            new Twig_Loader_Filesystem(__DIR__),
-            [
-                'debug' => true,
-            ]
+            new Twig_Loader_Filesystem(__DIR__)
         );
 
         $varExportFunction = new Twig_SimpleFunction('var_export', 'var_export');
 
-        $this->twig->addExtension(new Twig_Extension_Debug());
         $this->twig->addFunction($varExportFunction);
     }
 
