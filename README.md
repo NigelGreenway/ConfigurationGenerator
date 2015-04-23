@@ -79,7 +79,7 @@ Options:
  
 ```
 
-The generate configuration is:
+The generated configuration is:
 
 ```php
 <?php
