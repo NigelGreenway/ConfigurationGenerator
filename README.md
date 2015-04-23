@@ -5,6 +5,8 @@ This is a generator in its basic form. Using the PHP reflection classes, it allo
 - [League\Route](https://github.com/thephpleague/container)
 - [Colonel\Demander](https://github.com/colonel/demander)
 
+> The reflection class is **only** used for the building of the configuration file.
+
 # Usage
 
 ## Container
@@ -19,12 +21,12 @@ namespace MyApp\Service;
  */
 class EmailService
 {
-    private $swiftMailer;
+    private $swiftMailerAdaptor;
 
     public function __constuct(
-        SwiftMailer $swiftMailer
+        SwiftMailerAdaptorInterface $swiftMailerAdaptor
     ) {
-        $this->swiftMailer = $swiftMailer;
+        $this->swiftMailerAdaptor = $swiftMailerAdaptor;
     }
 }
 ```
@@ -37,8 +39,17 @@ The generate configuration is:
 return [
     'service' => [
         'di' => [
+            'swiftmailer.adaptor' => [
+                'class' => 'MyApp\Service\SwiftmailAdaptor',
+            ],
             'your.conanical.service.name' => [
                 'class' => 'MyApp\Service\EmailService',
                 'arguments' => [
+                    'swiftmailer.adaptor',
+                ],
+            ],
+        ],
+    ],
+];
 ```
 
