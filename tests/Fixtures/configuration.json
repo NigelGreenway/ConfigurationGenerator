@@ -1,0 +1,10 @@
+{
+    "services": {
+        "di": {
+            "demo.namespace": {
+                "class": "Demo\\Class"
+            }
+        }
+    },
+    "debug": true
+}
